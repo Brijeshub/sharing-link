@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Sharing</title>
+<style>
+/* CSS styles for the button */
+.conatainer{
+    outline: 5px solid rgba(62, 60, 60, 0.795);
+    height: 250px;
+    width: 400px;
+    border-radius: 10px;
+    background: #0266d182;
+    margin: auto;
+    text-align: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+</style>
+</head>
+<body>
+    <div class="conatainer">
+<h2>Data Sharing Link</h2>
+
+<!-- Button/link to generate data sharing link -->
+<button id="generateLink" class="button">Generate Data Sharing Link</button>
+
+<!-- Container to display the generated link -->
+<div id="linkContainer" style="display: none;">
+  <p>Share this link:</p>
+  <textarea id="sharingLink" rows="3" cols="50"></textarea>
+</div>
+</div>
+<script>
+// JavaScript code to generate the data sharing link
+document.getElementById("generateLink").addEventListener("click", function() {
+  // Replace the placeholder URL with your actual data sharing URL
+  var dataUrl = "https://example.com/data";
+  var sharingLink = document.getElementById("sharingLink");
+  sharingLink.value = dataUrl;
+  document.getElementById("linkContainer").style.display = "block";
+});
+</script>
+
+</body>
+</html>
